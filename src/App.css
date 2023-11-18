@@ -1,0 +1,91 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  --white: #ffffff;
+  --light-gray: #fffdd0;
+  --dark-gray: #6c6c6c;
+  --black: #1e1e1e;
+  --yellow: #f99c14;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculator {
+  display: grid;
+  grid-template-areas: 
+  "display display display display"
+  "clear negative percentage divide"
+  "seven eight nine multiply"
+  "four five six subtract"
+  "one two three add"
+  "zero zero decimal equal";
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 110px 110px 110px 110px 110px; 
+  column-gap: 10px;
+  row-gap: 15px;
+  margin-top: 20px;
+  padding: 15px 50px 25px 50px;
+  border-radius: 20px;
+  background-color: var(--black);
+}
+
+.light-gray {
+  background-color: var(--light-gray);
+}
+
+.dark-gray {
+  background-color: var(--dark-gray);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+button {
+  height: 100px;
+  width: 100%;
+  border: solid #dddbcb;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 100px;
+  color: var(--black);
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+  color: #800020;
+  transform: scale(0.9);
+  z-index: 3;
+}
+
+#answer {
+  font-size: 48px;
+  height: 48px;
+}
+
+#expression {
+  font-size: 30px;
+  height: 30px;
+  color: var(--dark-gray);
+}
+
+#display {
+  grid-area: display;
+  text-align: right;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#zero {
+  grid-area: zero;
+}
