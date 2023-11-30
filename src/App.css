@@ -11,7 +11,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,14 +27,14 @@
   "four five six subtract"
   "one two three add"
   "zero zero decimal equal";
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 110px 110px 110px 110px 110px; 
+  grid-template-columns: 90px 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px 90px 90px; 
   column-gap: 10px;
   row-gap: 15px;
   margin-top: 20px;
   padding: 15px 50px 25px 50px;
   border-radius: 20px;
-  background-color: var(--black);
+  border: 1px solid #dddbcb;
 }
 
 .light-gray {
@@ -69,17 +69,21 @@ button:hover {
 #answer {
   font-size: 48px;
   height: 48px;
+  color: var(--black);
 }
 
 #expression {
   font-size: 30px;
   height: 30px;
-  color: var(--dark-gray);
+  color: var(--black);
 }
 
 #display {
   grid-area: display;
   text-align: right;
+  background-color: #dddbcb;
+  border-radius: 15px;
+  border: 1px solid var(--dark-gray);
 }
 
 #clear {
